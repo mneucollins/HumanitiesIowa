@@ -1,0 +1,698 @@
+@import "../responsive/style.css";
+
+/*
+ Theme Name:   Responsive Child
+ Theme URI:
+ Description:  Responsive Child Theme for IHP Online
+ Author:       Ethan DeGross
+ Author URI:
+ Template:     responsive
+ Version:      1.0.0
+ Tags:         light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready
+ Text Domain:  responsive-child
+*/
+
+/* =Theme customization starts here width: 450px; width: 930px;
+-------------------------------------------------------------- */
+
+/*mn: style tabs */
+.nav.osc-res-nav.nav-tabs osc-tabs-left-ul
+{
+	font-family: Helvetica,Arial,Sans Serif;
+	font-weight: 700;
+	font-size: 1.5em;
+}
+
+#player{
+	width:480px; !important
+	height:360px; !important
+}
+
+.in_lvl1 { padding-left: 2em; }
+.in_lvl2 { padding-left: 4em; }
+
+/* Hide unwanted divs */
+.breadcrumb-list { display: none; }
+.post-meta { display: none; }
+#featured { display: none; }
+.site-name { display: none; }
+.scroll-top { display: none; }
+.powered { display: none; }
+.menu { display: none; }
+.entry-title.post-title { display: none; }
+/*displays titles on search page*/
+body.search.search-results.shiftnav-enabled.shiftnav-lock.shiftnav-disable-shift-body .entry-title.post-title { 
+display: block; }
+/*hides search form on mobile display menu(shiftnav plugin)*/
+#shiftnav-main #searchform{display: none;}
+
+
+/*col960 customization*/
+#content-full { margin-top: 0px; }
+
+/* Hides search bar at the bottom of custom menus being displayed in left sidebar
+-------------------------------------------------------------- */
+
+#nav_menu-3 #searchform, #menu-board #searchform{ display: none; }
+.menu-speakers-container #searchform { display: none; }
+
+/* Menu customization
+-------------------------------------------------------------- */
+.sub-header-menu:visited { background-color: #293742; }
+
+.sub-header-menu a
+{
+	text-shadow: none;
+	border-color: #fff;
+	font-family: 'helvetica';
+	background-color: #293742;
+	text-transform: uppercase;
+	font-size: 16px;
+	color: #fff;
+}
+
+.sub-header-menu .current_page_item a,.sub-header-menu .current-menu-item a,.sub-header-menu .menu .current_page_item a
+{
+	background-color: #678c84;
+	color: #3b3f3e;
+	
+}
+.sub-header-menu li li{
+	background-color: #678c84;
+}
+.sub-header-menu
+{
+	background-image: none;
+	background-color: transparent;
+	width: inherit;
+	margin-bottom: 20px;
+	border:none;
+}
+
+.sub-header-menu li li a
+{
+	background-color: #678c84;
+	color: #3b3f3e;
+}
+
+.sub-header-menu li li a:hover
+{
+	background-color: #678c84;
+	color: #fff;
+}
+
+.sub-header-menu a:hover
+{
+	background-color: #678c84;
+	color: #3b3f3e;
+	background-image: none;
+	text-shadow: none;
+}
+
+/* sidebar-menu is a copy of sub-header menu with customizations noted for use in the sidebar*/
+.sidebar-menu
+{
+	-moz-border-bottom-colors: none;
+	-moz-border-left-colors: none;
+	-moz-border-right-colors: none;
+	-moz-border-top-colors: none;
+	/* customization
+    background-color: #fff;*/
+	background-color: transparent;
+	border-color: -moz-use-text-color #e5e5e5 #e5e5e5;
+	border-image: none;
+	border-right: 1px solid #e5e5e5;
+	border-style: none solid solid;
+	border-width: medium 1px 1px;
+	clear: both;
+}
+
+.sidebar-menu,.sidebar-menu ul
+{
+	display: block;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow-y:scroll;
+	overflow-x:hidden;
+	height: 675px;
+	width:90%;
+}
+
+.sidebar-menu li
+{
+	border: .5px solid;
+	border-right:none;
+	display: block;
+	float: left;
+	margin: 0;
+	padding: 0;
+	position: relative;
+	z-index: 5;
+	/*customization*/
+	clear: right;
+	width: 100%;
+}
+
+.sidebar-menu li:hover
+{
+	white-space: normal;
+	z-index: 10000;
+}
+
+.sidebar-menu li li { float: none; }
+
+.sidebar-menu ul
+{
+	left: 0;
+	position: absolute;
+	top: 0;
+	visibility: hidden;
+	z-index: 10;
+}
+
+.sidebar-menu li:hover > ul
+{
+	top: 100%;
+	visibility: visible;
+}
+
+.sidebar-menu ul:after,.sidebar-menu:after
+{
+	clear: both;
+	content: ".";
+	display: block;
+	height: 0;
+	overflow: hidden;
+	visibility: hidden;
+}
+
+.sidebar-menu,.sidebar-menu ul { min-height: 0; }
+
+.sidebar-menu ul,.sidebar-menu ul ul
+{
+	margin: 0;
+	padding: 0;
+}
+
+.sidebar-menu li li a:hover,.sidebar-menu ul li a:hover
+{
+	color: #484848;
+	text-decoration: none;
+}
+
+.sidebar-menu ul
+{
+	margin-top: 1px;
+	min-width: 15em;
+	width: auto;
+}
+
+.sidebar-menu a
+{
+    border-left: 1px solid #e5e5e5;
+    cursor: pointer;
+    display: block;
+    font-weight: 400;
+    height: inherit;
+    line-height: 35px;
+    margin: 0;
+    padding: 0 .9em;
+    position: relative;
+    text-decoration: none;
+    text-shadow: none;
+    /*from sub-header-menu customization*/
+    background-color: #88BBDA;
+    font-family: helvetica,arial,sans;
+    border-color: #fff;
+    font-size: 16px;
+    color: #036 !important;
+}
+
+.sidebar-menu a:hover
+{
+    background-clip: padding-box;
+    /*from sub-head-menu customizations
+    background-color: #f9f9f9;*/
+    background-color: #6CF;
+    /*color: #FFC !important;*/
+    font-weight: bold;
+    text-shadow: none;
+}
+
+.sidebar-menu .current-menu-item a,.sidebar-menu .current_page_item a
+{
+	/*from sub-head-menu customization
+	background-color:#f9f9f9;*/
+	background-color: #2E698D;
+	color: #FAEBD4 !important;
+}
+
+.sidebar-menu li li
+{
+	background: none repeat scroll 0 0 #fff;
+	border: 1px solid #e5e5e5;
+	color: #444;
+	filter: none;
+	margin: -1px 0 1px;
+	width: auto;
+}
+
+.sidebar-menu li li a
+{
+	border: medium none;
+	color: #444;
+	font-size: 12px;
+	font-weight: 400;
+	height: 20px;
+	line-height: 20px;
+	padding: 5px 10px;
+	text-shadow: none;
+	white-space: nowrap;
+}
+
+.sidebar-menu li li a:hover
+{
+	background: none repeat scroll 0 0 #f9f9f9;
+	border: medium none;
+	color: #444;
+	filter: none;
+}
+
+.sidebar-menu ul > li + li { border-top: 0 none; }
+
+.sidebar-menu li li:hover > ul
+{
+	left: 100%;
+	top: 0;
+}
+
+.sidebar-menu > li:first-child > a { border-left: medium none; }
+
+.sidebar-menu .current_page_ancestor,.sidebar-menu .current_page_ancestor ul a,.sidebar-menu ul.children a
+{
+	background: none repeat scroll 0 0 rgba(0,0,0,0);
+	filter: none;
+}
+
+.ie7 .sidebar-menu ul { background: url(../../core/images/ie7-fix.gif) repeat scroll 0 0 rgba(0,0,0,0); }
+.ie7 .sidebar-menu li li a { min-width: 100%; }
+
+/*additional sidebar menu tweaks*/
+h2.widgettitle
+{
+	margin: 0px;
+	text-transform: uppercase;
+	font-size: 1.5em;
+	width: 95%;
+}
+
+/*google calendar customization*/
+
+.gce-list
+{
+    list-style-type: none;
+}
+.gce-list ul
+{
+    /*margin-left: 2em !important;*/
+}
+
+.gce-list-title {
+    background-color: #dddddd;
+    margin-top: 1em;
+}
+
+.gce-list-event
+{
+    font-weight: bold;
+    margin-top:.5em;
+}
+
+.gce-month-title
+{
+	font-family: 'montserrat', sans-serif;
+	font-size: 1.75em;
+	font-weight: 700;
+}
+
+
+.gce-page-grid .gce-calendar .gce-has-events {
+    color: #678c84;
+}
+
+
+
+/* Color customization for links and content within post entries
+-------------------------------------------------------------------*/
+
+.post-entry a { color: #0071BC; }
+.post-entry a:hover {
+    color: #0071BC;
+    text-decoration: underline;
+}
+.post-entry { font-family: georgia; }
+
+/* Link customization for Tag Cloud
+-------------------------------------------------------------------*/
+
+/* unvisited link */
+.tagcloud a:link { color: #0071BC; }
+
+/* visited link */
+.tagcloud a:visited { color: #0071BC; }
+
+/* mouse over link */
+.tagcloud a:hover { color: #0000FF; }
+
+/* selected link */
+.tagcloud a:active { color: gray; }
+
+/* Color customization for Search Error
+-------------------------------------------------------------------*/
+
+.title-404 { color: #000; }
+
+/* Link customization for Post's Main Headers
+-------------------------------------------------------------------------------------------------------------- */
+
+/* unvisited link */
+.entry-title a:link,post-title a:link { color: #000; }
+
+/* visited link */
+.entry-title a:visited,post-title a:visited { color: #000; }
+
+/* mouse over link */
+.entry-title a:hover,post-title a:hover { color: #630; }
+
+/* selected link */
+.entry-title a:active,post-title a:active { color: #630; }
+
+/* Link customization for 	Home Page's: 	"More",
+				Post's: 	"read more", "edit", Author, tags, time posted
+				Error page's: 	"home"
+				All Pages:	top right "submit" and "help"
+-------------------------------------------------------------------------------------------------------------- */
+
+/* unvisited link */
+.upw-more a:link,.post-edit a:link,.author a,.post-data a,.post-meta a,#content-search a,.top-menu li a { color: #000; }
+
+/* visited link */
+.upw-more a:visited,.post-edit a:visited,.author a:visited,.post-data a:visited,.post-meta a:visited,#content-search a:visited,.top-menu li a:visited { color: #000; }
+
+/* mouse over link */
+.upw-more a:hover,.post-edit a:hover,.author a:hover,.post-data a:hover,.post-meta a:hover,#content-search a:hover,.top-menu li a:hover { color: #630; }
+
+/* selected link */
+.upw-more a:active,.post-edit a:active,.author a:active,.post-data a:active,.post-meta a:active,#content-search a:active,.top-menu li a:active { color: #630; }
+
+/*Bold Text and Header's color customization
+-------------------------------------------------------------------*/
+
+strong { color: #000; }
+
+h1,h2,h3,h4,h5,h6
+{
+	color: #000;
+	font-family: 'montserrat',sans-serif;
+}
+
+/*Whole page background and text color customization
+-------------------------------------------------------------------*/
+
+body { color: #000; }
+
+#text-3
+{
+	padding-top: 0;
+	padding-bottom: 0;
+	margin-bottom: 0;
+}
+
+#wrapper
+{
+	background-color: #efefef;
+	border: none;
+	padding: 0px;
+}
+
+#splashPageSlideShow {
+    padding: 20px;
+}
+
+.shiftnav-wrap {
+    padding-top: 0px !important;
+}
+
+.logoUI
+{
+	float: right;
+	position: relative;
+	z-index: 1;
+	top: -30px;
+}
+
+/* Color customization for Widgets - More general selectors
+--------------------------------------------------------------------------------------------------*/
+
+.widget-wrapper,#wrapper
+{
+	border-style: none;
+	border-width: 5px;
+}
+
+#widgets .textwidget a,#footer a { color: #000; }
+#widgets .textwidget a:hover,#footer a:hover { color: gray; }
+#home_widget_1 .textwidget a:hover { color: #3c557c; }
+#home_widget_1 .textwidget a { }
+
+.home-widgets .widget-wrapper
+{
+	text-shadow: none;
+	border-style: none;
+	color: #fff;
+	overflow: auto;
+	resize: inherit;
+}
+
+/*Home widgets Customization - More specific selectors
+-------------------------------------------------------------------*/
+
+#home_widget_1 .widget-wrapper
+{
+	
+}
+
+#home_widget_2 .widget-wrapper,#home_widget_3 .widget-wrapper
+{
+
+}
+
+#home_widget_4 .widget-wrapper
+{
+
+}
+
+#home_widget_5 .widget-wrapper
+{
+	background-color: transparent;
+	border: none;
+	position: relative;
+}
+
+/* Nav Bar "search" customization
+-------------------------------------------------------------------*/
+
+#searchform
+{
+	position: relative;
+	top: 3px;
+	float: right;
+	margin-right: 0;
+	margin-bottom: 0;
+	margin-top: 0;
+	margin-left: 10px;
+}
+
+/*#s{
+	box-shadow:none;
+	border-style:none;
+}*/
+
+#searchsubmit { display: none; }
+
+/* Footer Customization
+----------------------------------------------------------------------------------------*/
+
+#footer .widget-wrapper
+{
+	border-style: none;
+	background-color: transparent;
+}
+
+/* Slide show Customization
+-------------------------------------------------------------------*/
+.slideshow_description_box{
+	margin-bottom:60px;
+	height: 30px;
+}
+
+/* Slideshow banner color customization
+-------------------------------------------------------------------*/
+.slideshow_container .slideshow_view .slideshow_slide.slideshow_slide_image .slideshow_description_box {
+	background-color:#9fc2de;
+	opacity: .9;
+}
+
+/* Little square selectors below the slideshow
+-------------------------------------------------------------------*/
+
+#splashPageSlideShow
+{
+	background-color: #9fc2de;
+	height: 200px;
+	border-style: 2px solid;
+	border-radius: 15px;
+}
+
+.slideshow_pagination_center
+{
+	position: relative;
+	z-index: -1;
+	bottom: -35px;
+}
+
+.slideshow_container .slideshow_pagination ul li
+{
+	margin: 0 2px;
+	width: 15px;
+	height: 15px;
+	background-image: url(http://dsph-dev.provost.uiowa.edu/ihop/wp-content/uploads/2014/07/Slideshow_dots.png)no-repeat;
+}
+
+/* Slideshow button customization
+-------------------------------------------------------------------
+.slideshow_container .slideshow_button {
+	margin-left: -40px;
+	margin-right: -40px;
+	height: 40px;
+	width: 19px;
+	background: url('%plugin-url%/images/SlideshowPlugin/light-arrows.png') no-repeat;
+}*/
+
+/* Customizes the footer text box length (didn't find the text-9 col-300 php to adjust)
+-------------------------------------------------------------------*/
+
+#text-9 { width: 940px; }
+
+#post-60
+{
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+/* Customizes the news box on the front page
+-------------------------------------------------------------------*/
+#sticky-posts-3{
+	background-color:transparent;
+	border:solid;
+	border-color:#678c84;
+	border-radius: 15px;
+
+	width:99.5%;
+}
+
+#sticky-posts-3 ul {
+	list-style-type:none;
+}
+
+#sticky-posts-3 .entry-title.post-title{ display: initial; }
+
+.upw-content .post-title{
+	margin-top: 0px;
+}
+
+
+/* Customizes the news page which displays more than just the most recent post
+-------------------------------------------------------------------*/
+#sticky-posts-4{
+	background-color:transparent;
+}
+
+#sticky-posts-4 ul {
+	list-style-type:none;
+}
+
+/* Displays title for the news sections, where we previously hid title from displaying on the top of pages
+-------------------------------------------------------------------*/
+#content .entry-title.post-title, #content-blog .entry-title.post-title{
+	display: initial;
+}
+
+/* There was too big of a white space at the top of pages, could not override the element tag, so we moved the whole page up by -50px
+-------------------------------------------------------------------*/
+body {
+	top:-50px;
+	position:relative; 
+}
+/* Contact Us page, custom centered for two names on bottom
+-------------------------------------------------------------------*/
+	#contactUsInner {
+	float:left;
+	min-width: 320px;
+	/* margin: 0px 150px 0px 150px; */
+	}
+	
+	#contactUsInner2 {
+	float:left;
+	}
+
+
+/*Mobile CSS - Title adjustment for mobile screens----------------------------------------------------------------------------*/
+
+@media screen and (max-width: 480px)
+{
+	.main-nav{display:none;}
+	#splashPageSlideShow{display:none}
+	
+	body {
+	top:inherit;
+	position:relative; 
+	}
+	
+	#sticky-posts-3{
+	background-color:transparent;
+	border:none;
+	width:inherit;
+	
+	}
+	
+	#contactUsInner {
+	float:none;
+	margin:0px;
+	}
+	
+	#contactUsInner2 {
+	float:none;
+	}
+
+}
+
+@media screen and (min-width: 481px)
+and (max-width: 980px)
+{
+	#menu-main-nav{display:none;}
+	.main-nav{display:none;}
+}
+
+/*Anything desktop screen size----------------------------------------------------------------------------*/
+
+@media screen and (min-width: 981px)
+{
+	.shiftnav-toggle{display:none;}
+
+}
+/* Little square selectors below the slideshow
+-did not use because it messes with the description box banner's width and it doesn't look as good
+-------------------------------------------------------------------
+.slideshow_container .slideshow_slide_image {border: 5px solid white;}*/
